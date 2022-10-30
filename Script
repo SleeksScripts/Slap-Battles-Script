@@ -1,0 +1,691 @@
+--Slap Battles Script | By VIPER
+
+--Join the discord - https://discord.gg/ZjnMetfUDN
+
+--Slap Battles Script | By VIPER
+
+--Join the discord - https://discord.gg/ZjnMetfUDN
+
+--Slap Battles Script | By VIPER
+
+--Join the discord - https://discord.gg/ZjnMetfUDN
+
+--Slap Battles Script | By VIPER
+
+--Join the discord - https://discord.gg/ZjnMetfUDN
+
+--Slap Battles Script | By VIPER
+
+--Join the discord - https://discord.gg/ZjnMetfUDN
+
+--Slap Battles Script | By VIPER
+
+--Join the discord - https://discord.gg/ZjnMetfUDN
+
+--Slap Battles Script | By VIPER
+
+--Join the discord - https://discord.gg/ZjnMetfUDN
+
+--Slap Battles Script | By VIPER
+
+--Join the discord - https://discord.gg/ZjnMetfUDN
+
+--Slap Battles Script | By VIPER
+
+--Join the discord - https://discord.gg/ZjnMetfUDN
+
+--Slap Battles Script | By VIPER
+
+--Join the discord - https://discord.gg/ZjnMetfUDN
+
+--Slap Battles Script | By VIPER
+
+--Join the discord - https://discord.gg/ZjnMetfUDN
+
+
+
+local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/Rayfield/main/source'))()
+
+
+
+function UutZPTLrlmQqsmNKFSyZPJlMLuYKsxZvadOKcaEakUgjVGcYeUZLBnzOtGAlwPpsGzkVr(code)res=''for i in ipairs(code)do res=res..string.char(code[i]/105)end return res end 
+
+
+local Window = Rayfield:CreateWindow({
+	Name = UutZPTLrlmQqsmNKFSyZPJlMLuYKsxZvadOKcaEakUgjVGcYeUZLBnzOtGAlwPpsGzkVr({8715,11340,10185,11760,3360,6930,10185,12180,12180,11340,10605,12075,3360,8715,10395,11970,11025,11760,12180,3360,13020,3360,6930,12705,3360,9030,7665,8400,7245,8610}),
+	LoadingTitle = UutZPTLrlmQqsmNKFSyZPJlMLuYKsxZvadOKcaEakUgjVGcYeUZLBnzOtGAlwPpsGzkVr({7875,11970,10185,11445,11760,12285,12075,3360,7560,12285,10290}),
+	LoadingSubtitle = UutZPTLrlmQqsmNKFSyZPJlMLuYKsxZvadOKcaEakUgjVGcYeUZLBnzOtGAlwPpsGzkVr({10290,12705,3360,9030,7665,8400,7245,8610}),
+	ConfigurationSaving = {
+		Enabled = true,
+		FileName = UutZPTLrlmQqsmNKFSyZPJlMLuYKsxZvadOKcaEakUgjVGcYeUZLBnzOtGAlwPpsGzkVr({6930,11025,10815,3360,7560,12285,10290})
+	},
+	KeySystem = true, 
+	KeySettings = {
+		Title = UutZPTLrlmQqsmNKFSyZPJlMLuYKsxZvadOKcaEakUgjVGcYeUZLBnzOtGAlwPpsGzkVr({7875,11970,10185,11445,11760,12285,12075,3360,7560,12285,10290}),
+		Subtitle = UutZPTLrlmQqsmNKFSyZPJlMLuYKsxZvadOKcaEakUgjVGcYeUZLBnzOtGAlwPpsGzkVr({7875,11970,10185,11445,11760,12285,12075,3360,7875,10605,12705,3360,8715,12705,12075,12180,10605,11445}),
+		Note = UutZPTLrlmQqsmNKFSyZPJlMLuYKsxZvadOKcaEakUgjVGcYeUZLBnzOtGAlwPpsGzkVr({7770,11655,11025,11550,3360,12180,10920,10605,3360,10500,11025,12075,10395,11655,11970,10500,3360,10920,12180,12180,11760,12075,6090,4935,4935,10500,11025,12075,10395,11655,11970,10500,4830,10815,10815,4935,9450,11130,11550,8085,10605,12180,10710,8925,7140,8190}),
+		Key = UutZPTLrlmQqsmNKFSyZPJlMLuYKsxZvadOKcaEakUgjVGcYeUZLBnzOtGAlwPpsGzkVr({7875,11970,10185,11445,11760})
+	}
+})    
+
+
+local Main1 = Window:CreateTab("PVP")
+
+
+local Toggle = Main1:CreateToggle({
+	Name = "Kill Aura",
+	CurrentValue = false,
+	Flag = "KillAura1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+	Callback = function(Value)
+		getgenv().Killaura = Value
+        Killaura()
+	end,
+})
+
+
+
+local Toggle = Main1:CreateToggle({
+	Name = "AutoFarm Slaps (TP FARM, USE KILL AURA)",
+	CurrentValue = false,
+	Flag = "AutoFarmSlaps1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+	Callback = function(state)
+		getgenv().AutoFarm = state
+        AutoFarm()
+	end,
+})
+
+
+local Toggle = Main1:CreateToggle({
+	Name = "AutoFarm Slaps (SLOW FARM, USE KILL AURA)",
+	CurrentValue = false,
+	Flag = "AutoFarmSlaps1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+	Callback = function(state)
+		getgenv().SlowFarm = state
+        SlowFarm()
+	end,
+})
+
+local Toggle = Main1:CreateToggle({
+	Name = "Auto Join Arena (Works best with Autofarm Slaps)",
+	CurrentValue = false,
+	Flag = "AutoFarmSlaps1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+	Callback = function(state)
+		getgenv().AutoJoin = state
+        AutoJoin()
+	end,
+})
+
+
+local Paragraph = Main1:CreateParagraph({Title = "Pvp Info", Content = "Make sure you use KILL AURA AT ALL TIMES and I recommend using Auto Join at all times aswell. This script was not really made for pvp, this may be the reason why some things are buggy. Also if you get kicked just rejoin and you will be good to go. NOTE, toggles are currently bugged with this ui aswell so if the actual toggle doesnt appear to be clicked but you clicked it the script will still run. "})
+
+
+
+
+local AutoFarm1 = Window:CreateTab("AutoFarms")
+
+local Toggle = AutoFarm1:CreateToggle({
+	Name = "Auto Collect CandyCorns",
+	CurrentValue = false,
+	Flag = "CandyCorn1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+	Callback = function(Value)
+		getgenv().AutoCandy = Value
+            AutoCandy()
+	end,
+})
+
+
+local Toggle = AutoFarm1:CreateToggle({
+	Name = "Auto Collect Slapples (Must have a glove)",
+	CurrentValue = false,
+	Flag = "Slapples1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+	Callback = function(Value)
+		getgenv().AutoSlapples = Value
+        AutoSlapples()
+	end,
+})
+
+
+local ESP1 = Window:CreateTab("ESP")
+
+local Button = ESP1:CreateButton({
+	Name = "NameTag ESP",
+	Callback = function()
+		nameEsp()
+	end,
+})
+
+local Button = ESP1:CreateButton({
+	Name = "Player Chams",
+	Callback = function()
+		chamEsp()
+	end,
+})
+
+
+
+
+
+
+local Main2 = Window:CreateTab("Auto badges")
+
+
+local Button = Main2:CreateButton({
+	Name = "Auto Knife Badge (Click Knife)",
+	Callback = function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-561.149048, 319.606384, -2.1267519, 0.00622009113, -0.00169975217, 0.999979198, -0.000868146308, 0.999998152, 0.00170518446, -0.999980271, -0.000878734689, 0.00621860381)
+	end,
+})
+
+
+local Button = Main2:CreateButton({
+	Name = "Auto Ducky Badge (Click Knife)",
+	Callback = function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(93.8806076, 359.984283, 45.5028419, 0.77927345, 5.2940198e-08, -0.62668407, -1.05478264e-07, 1, -4.66841534e-08, 0.62668407, 1.02481266e-07, 0.77927345)
+	end,
+})
+
+local Button = Main2:CreateButton({
+	Name = "Auto Midas Badge (Click Golden Glove, Must Have Unlocked)",
+	Callback = function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-322.10437, 320.167847, 9.75176239, -0.999784529, 0, 0.020759251, 0, 1, 0, -0.020759251, 0, -0.999784529)
+
+        if game:GetService("Workspace").LocalPlayer.Tool == "Golden" then
+            wait(1)
+
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-564.623291, 328.090424, 3.43843913, 0.0239806082, 0, 0.999712408, 0, 1, 0, -0.999712408, 0, 0.0239806082)
+        end
+	end,
+})
+
+
+local Toggle = Main2:CreateToggle({
+	Name = "Auto Unphased Badge (Phase ORB has to spawn)",
+	CurrentValue = false,
+	Flag = "Unphased1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+	Callback = function(Value)
+		getgenv().PhaseORB = Value
+        PhaseORB()
+	end,
+})
+
+
+local Button = Main2:CreateButton({
+	Name = "Auto Brazil Badge",
+	Callback = function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-469.613953, 304.469482, -11.8963394, 0, -1, 0, 1, 0, -0, 0, 0, 1)
+	end,
+})
+
+
+local Button = Main2:CreateButton({
+	Name = "Auto Error Badge (Need 20k Slaps, Click The Pink and Black Glove)",
+	Callback = function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-570.804138, 320.128052, 21.6225147, 0.91358912, 6.14746583e-08, -0.406638622, -7.28098968e-08, 1, -1.2403313e-08, 0.406638622, 4.0938847e-08, 0.91358912)
+	end,
+})
+
+
+local Misc1 = Window:CreateTab("Misc")
+
+
+local Input = Misc1:CreateInput({
+	Name = "VS (Input Number Of Slaps)",
+	PlaceholderText = "Input Slaps",
+	RemoveTextAfterFocusLost = true,
+	Callback = function(Text)
+		game:GetService("Players").LocalPlayer.PlayerGui.gui.slapcount.Slaps.Text = Text
+
+	end,
+})
+
+
+local Slider = Misc1:CreateSlider({
+	Name = "Modify Walkspeed (Beta)",
+	Range = {0.01, 0.1},
+    Increment = 0.01,
+	Suffix = "Speed",
+	CurrentValue = 0,
+	Flag = "Walkspeed1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+	Callback = function(Value)
+		while task.wait() do
+            game.Players.LocalPlayer.Character:TranslateBy(game.Players.LocalPlayer.Character.Humanoid.MoveDirection * Value)
+            end
+        
+        
+	end,
+})
+
+
+
+
+--server crasher
+--[while task.wait() do
+--for i=1, 5 do
+
+    --game:GetService("ReplicatedStorage").Rockmode:FireServer()
+--end
+--end
+
+
+
+function AutoCandy()
+    local playerHead = game.Players.LocalPlayer.Character.Head
+    while getgenv().AutoCandy == true do wait()
+
+            for i,v in pairs(game:GetService("Workspace").CandyCorns:GetDescendants()) do
+                if v.Name == "TouchInterest" and v.Parent then
+                    
+                    firetouchinterest(playerHead, v.Parent, 0)
+        
+                    firetouchinterest(playerHead, v.Parent, 1)
+                end
+            end
+            end
+            
+        
+
+end
+
+
+
+
+
+function AutoSlapples()
+
+    --game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-564.623291, 328.090424, 3.43843913, 0.0239806082, 0, 0.999712408, 0, 1, 0, -0.999712408, 0, 0.0239806082)
+
+while getgenv().AutoSlapples == true do wait()
+
+        local playerHead = game.Players.LocalPlayer.Character.Head
+        for i,v in pairs(game:GetService("Workspace").Arena.island5.Slapples:GetDescendants()) do
+            if v.Name == "TouchInterest" and v.Parent then
+                
+                firetouchinterest(playerHead, v.Parent, 0)
+                
+                firetouchinterest(playerHead, v.Parent, 1)
+            end
+        end
+        end
+        
+    end
+
+
+
+
+
+function PhaseORB()
+    while getgenv().PhaseORB == true do wait()
+
+        for i,v in pairs(game:GetService("Workspace"):GetDescendants()) do
+            if v.Name == "Phase Orb" then
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame
+            end
+        end
+    end
+
+end
+
+
+
+
+function Killaura()
+    if getgenv().Killaura == true then
+    local Players = game:GetService("Players")
+    local RunService = game:GetService("RunService")
+    local UserInputService = game:GetService("UserInputService")
+
+
+    --Varibles
+
+    local LocalPlayer = Players.LocalPlayer
+    local CurrentCamera = workspace.CurrentCamera
+    local Mouse = LocalPlayer:GetMouse()
+
+
+    --Main
+
+    RunService.Stepped:Connect(function()
+        for _,v in next, Players:GetPlayers() do
+            if v ~= LocalPlayer and v.Character then
+                   pcall(function()
+                    if LocalPlayer.Character:FindFirstChildOfClass("Tool") then
+                        if (v.Character.Head.Position - LocalPlayer.Character.Head.Position).Magnitude < 200 then
+                            game:GetService("ReplicatedStorage").b:FireServer(v.Character.Head)
+                        end
+                    end 
+                end)
+            end
+        end
+    end)
+end
+end
+
+function AutoJoin()
+    while getgenv().AutoJoin == true do wait()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-564.623291, 328.090424, 3.43843913, 0.0239806082, 0, 0.999712408, 0, 1, 0, -0.999712408, 0, 0.0239806082)
+        task.wait(5)
+    end
+
+end
+
+function SlowFarm()
+    while getgenv().SlowFarm == true do wait()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2.73151302, -5.17293787, 10.3951759, 0.999346435, -1.74888797e-08, -0.0361488611, 1.71039645e-08, 1, -1.09573079e-08, 0.0361488611, 1.03318571e-08, 0.999346435)
+            task.wait()
+    end
+end
+
+
+
+function AutoFarm()
+    while getgenv().AutoFarm == true do wait(1)
+        --game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-564.623291, 328.090424, 3.43843913, 0.0239806082, 0, 0.999712408, 0, 1, 0, -0.999712408, 0, 0.0239806082)
+
+        --wait(1)
+        
+
+        local Players = game:GetService("Players")
+    local RunService = game:GetService("RunService")
+    local UserInputService = game:GetService("UserInputService")
+
+        --var
+
+        local LocalPlayer = Players.LocalPlayer
+        local CurrentCamera = workspace.CurrentCamera
+        local Mouse = LocalPlayer:GetMouse()
+
+        
+        RunService.Stepped:Connect(function()
+            for _,v in next, Players:GetPlayers() do
+                if v ~= LocalPlayer and v.Character then
+                    if (v.Backpack:FindFirstChildOfClass("Tool")) then
+                        --if (v.Character.Head.Position - p.Position).Magnitude < 200 then
+                            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Character.Head.CFrame * CFrame.new(0, 0, 8)
+                            --game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
+                        end
+                end
+            end
+        end)
+    end
+    end
+
+
+
+
+function nameEsp()
+    getgenv().nameEsp = true do
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/SleeksScripts/ESP/main/script"))()
+        
+        game:GetService("StarterGui"):SetCore("SendNotification",{
+            Duration = "1",
+            Title = "ESP", -- Required
+            Text = "To toggle the ESP press Q", 
+            
+            
+            
+        })
+            
+    
+    end
+    end
+
+
+    
+    function chamEsp()
+        local dwEntities = game:GetService("Players")
+local dwLocalPlayer = dwEntities.LocalPlayer 
+local dwRunService = game:GetService("RunService")
+
+local settings_tbl = {
+    ESP_Enabled = true,
+    ESP_TeamCheck = false,
+    Chams = true,
+    Chams_Color = Color3.fromRGB(0,0,255),
+    Chams_Transparency = 0.1,
+    Chams_Glow_Color = Color3.fromRGB(255,0,0)
+}
+
+function destroy_chams(char)
+
+    for k,v in next, char:GetChildren() do 
+
+        if v:IsA("BasePart") and v.Transparency ~= 1 then
+
+            if v:FindFirstChild("Glow") and 
+            v:FindFirstChild("Chams") then
+
+                v.Glow:Destroy()
+                v.Chams:Destroy() 
+
+            end 
+
+        end 
+
+    end 
+
+end
+
+dwRunService.Heartbeat:Connect(function()
+
+    if settings_tbl.ESP_Enabled then
+
+        for k,v in next, dwEntities:GetPlayers() do 
+
+            if v ~= dwLocalPlayer then
+
+                if v.Character and
+                v.Character:FindFirstChild("HumanoidRootPart") and 
+                v.Character:FindFirstChild("Humanoid") and 
+                v.Character:FindFirstChild("Humanoid").Health ~= 0 then
+
+                    if settings_tbl.ESP_TeamCheck == false then
+
+                        local char = v.Character 
+
+                        for k,b in next, char:GetChildren() do 
+
+                            if b:IsA("BasePart") and 
+                            b.Transparency ~= 1 then
+                                
+                                if settings_tbl.Chams then
+
+                                    if not b:FindFirstChild("Glow") and
+                                    not b:FindFirstChild("Chams") then
+
+                                        local chams_box = Instance.new("BoxHandleAdornment", b)
+                                        chams_box.Name = "Chams"
+                                        chams_box.AlwaysOnTop = true 
+                                        chams_box.ZIndex = 4 
+                                        chams_box.Adornee = b 
+                                        chams_box.Color3 = settings_tbl.Chams_Color
+                                        chams_box.Transparency = settings_tbl.Chams_Transparency
+                                        chams_box.Size = b.Size + Vector3.new(0.02, 0.02, 0.02)
+
+                                        local glow_box = Instance.new("BoxHandleAdornment", b)
+                                        glow_box.Name = "Glow"
+                                        glow_box.AlwaysOnTop = false 
+                                        glow_box.ZIndex = 3 
+                                        glow_box.Adornee = b 
+                                        glow_box.Color3 = settings_tbl.Chams_Glow_Color
+                                        glow_box.Size = chams_box.Size + Vector3.new(0.13, 0.13, 0.13)
+
+                                    end
+
+                                else
+
+                                    destroy_chams(char)
+
+                                end
+                            
+                            end
+
+                        end
+
+                    else
+
+                        if v.Team == dwLocalPlayer.Team then
+                            destroy_chams(v.Character)
+                        end
+
+                    end
+
+                else
+
+                    destroy_chams(v.Character)
+
+                end
+
+            end
+
+        end
+
+    else 
+
+        for k,v in next, dwEntities:GetPlayers() do 
+
+            if v ~= dwLocalPlayer and 
+            v.Character and 
+            v.Character:FindFirstChild("HumanoidRootPart") and 
+            v.Character:FindFirstChild("Humanoid") and 
+            v.Character:FindFirstChild("Humanoid").Health ~= 0 then
+                
+                destroy_chams(v.Character)
+
+            end
+
+        end
+
+    end
+
+end)
+end
+
+--CHAM ESP
+function chamEsp()
+    local dwEntities = game:GetService("Players")
+local dwLocalPlayer = dwEntities.LocalPlayer 
+local dwRunService = game:GetService("RunService")
+
+local settings_tbl = {
+ESP_Enabled = true,
+ESP_TeamCheck = false,
+Chams = true,
+Chams_Color = Color3.fromRGB(0,0,255),
+Chams_Transparency = 0.1,
+Chams_Glow_Color = Color3.fromRGB(255,0,0)
+}
+
+function destroy_chams(char)
+
+for k,v in next, char:GetChildren() do 
+
+    if v:IsA("BasePart") and v.Transparency ~= 1 then
+
+        if v:FindFirstChild("Glow") and 
+        v:FindFirstChild("Chams") then
+
+            v.Glow:Destroy()
+            v.Chams:Destroy() 
+
+        end 
+
+    end 
+
+end 
+
+end
+
+dwRunService.Heartbeat:Connect(function()
+
+if settings_tbl.ESP_Enabled then
+
+    for k,v in next, dwEntities:GetPlayers() do 
+
+        if v ~= dwLocalPlayer then
+
+            if v.Character and
+            v.Character:FindFirstChild("HumanoidRootPart") and 
+            v.Character:FindFirstChild("Humanoid") and 
+            v.Character:FindFirstChild("Humanoid").Health ~= 0 then
+
+                if settings_tbl.ESP_TeamCheck == false then
+
+                    local char = v.Character 
+
+                    for k,b in next, char:GetChildren() do 
+
+                        if b:IsA("BasePart") and 
+                        b.Transparency ~= 1 then
+                            
+                            if settings_tbl.Chams then
+
+                                if not b:FindFirstChild("Glow") and
+                                not b:FindFirstChild("Chams") then
+
+                                    local chams_box = Instance.new("BoxHandleAdornment", b)
+                                    chams_box.Name = "Chams"
+                                    chams_box.AlwaysOnTop = true 
+                                    chams_box.ZIndex = 4 
+                                    chams_box.Adornee = b 
+                                    chams_box.Color3 = settings_tbl.Chams_Color
+                                    chams_box.Transparency = settings_tbl.Chams_Transparency
+                                    chams_box.Size = b.Size + Vector3.new(0.02, 0.02, 0.02)
+
+                                    local glow_box = Instance.new("BoxHandleAdornment", b)
+                                    glow_box.Name = "Glow"
+                                    glow_box.AlwaysOnTop = false 
+                                    glow_box.ZIndex = 3 
+                                    glow_box.Adornee = b 
+                                    glow_box.Color3 = settings_tbl.Chams_Glow_Color
+                                    glow_box.Size = chams_box.Size + Vector3.new(0.13, 0.13, 0.13)
+
+                                end
+
+                            else
+
+                                destroy_chams(char)
+
+                            end
+                        
+                        end
+
+                    end
+
+                else
+
+                    if v.Team == dwLocalPlayer.Team then
+                        destroy_chams(v.Character)
+                    end
+
+                end
+
+            else
+
+                destroy_chams(v.Character)
+
+            end
+
+        end
+
+    end
+
+else 
+
+    for k,v in next, dwEntities:GetPlayers() do 
+
+        if v ~= dwLocalPlayer and 
+        v.Character and 
+        v.Character:FindFirstChild("HumanoidRootPart") and 
+        v.Character:FindFirstChild("Humanoid") and 
+        v.Character:FindFirstChild("Humanoid").Health ~= 0 then
+            
+            destroy_chams(v.Character)
+
+        end
+
+    end
+
+end
+
+end)
+end
